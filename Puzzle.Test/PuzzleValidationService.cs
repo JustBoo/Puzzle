@@ -10,7 +10,7 @@ namespace Tests
     [TestFixture]
     public class PuzzleValidationServiceTest
     {
-        List<KeyValuePair<int, int>> Links = new List<KeyValuePair<int, int>>(){
+        List<KeyValuePair<int, int>> links = new List<KeyValuePair<int, int>>(){
             new KeyValuePair<int, int>(1,2),
             new KeyValuePair<int, int>(2,3),
             new KeyValuePair<int, int>(3,4),
@@ -39,7 +39,7 @@ namespace Tests
             {
                 gameField.Cells.Add(new FieldCell(i));
             }
-            foreach (var link in Links)
+            foreach (var link in links)
             {
                 var firstCell = gameField.Cells.First(x => x.Index == link.Key);
                 var secondCell = gameField.Cells.First(x => x.Index == link.Value);

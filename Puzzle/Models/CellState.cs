@@ -36,7 +36,7 @@
         /// <summary>
         /// Copy game field's cell state.
         /// </summary>
-        /// <returns>CellState</returns>
+        /// <returns>Cell state.</returns>
         public CellState Copy()
         {
             return new CellState(CellIndex, CellValue);

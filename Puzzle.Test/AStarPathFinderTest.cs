@@ -10,6 +10,14 @@ namespace Tests
     [TestFixture]
     public class AStarPathFinderTest
     {
+        private const int GameFieldSize = 10;
+
+        private const int EmptyCellIndex = 4;
+
+        GameField gameField;
+
+        AStarPathFinder aStarPathFinder;
+
         private List<KeyValuePair<int, int>> Links = new List<KeyValuePair<int, int>>(){
             new KeyValuePair<int, int>(1,2),
             new KeyValuePair<int, int>(1,3),
@@ -25,14 +33,6 @@ namespace Tests
             new KeyValuePair<int, int>(8,9)
         };
 
-        GameField gameField;
-
-        private const int gameFieldSize = 10;
-
-        private const int emptyCellIndex = 4;
-
-        AStarPathFinder aStarPathFinder;
-
         [SetUp]
         public void Init()
         {
@@ -40,9 +40,9 @@ namespace Tests
 
             gameField = new GameField();
 
-            gameField.EmptyCellIndex = emptyCellIndex;
+            gameField.EmptyCellIndex = EmptyCellIndex;
 
-            for (int i = 0; i < gameFieldSize; i++)
+            for (int i = 0; i < GameFieldSize; i++)
             {
                 gameField.Cells.Add(new FieldCell(i));
             }

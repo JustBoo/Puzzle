@@ -3,6 +3,9 @@ using Puzzle.Services.Interfaces;
 
 namespace Puzzle
 {
+    /// <summary>
+    /// Puzzle resolver class. 
+    /// </summary>
     public class PuzzleResolverService : IResolver
     {
         private readonly IPathFinder _pathFinder;
@@ -19,6 +22,11 @@ namespace Puzzle
             _gameFieldCreationService = gameFieldCreationService;
         }
 
+        /// <summary>
+        /// Find puzzle solution.
+        /// </summary>
+        /// <param name="input">Array of input integers.</param>
+        /// <returns>Array of moved numbers for solution.</returns>
         public int[] Solve(int[] input)
         {
             var gameField = GetGameField();

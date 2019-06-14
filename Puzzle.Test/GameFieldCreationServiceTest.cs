@@ -44,7 +44,7 @@ namespace Tests
         }
 
         [Test]
-        public void Init_EmptyIndexBiggerThenGameFieldSize_ArgumentException()
+        public void Init_EmptyCellIndexBiggerThanGameFieldSize_ArgumentException()
         {
             var gameFieldSize = 4;
             var emptyCellIndex = 6;

@@ -4,8 +4,16 @@ using System.Linq;
 
 namespace Puzzle.Services.Implementation
 {
+    /// <summary>
+    /// Validation service class.  
+    /// </summary>
     public class PuzzleValidationService : IPuzzleValidationService
     {
+        /// <summary>
+        /// Validate path finder input params.
+        /// </summary>
+        /// <param name="input">Array of input integers.</param>
+        /// <param name="gameField">Generated game field <see cref="GameField"/>.</param>
         public void Validate(int[] input, GameField gameField)
         {
 

@@ -6,6 +6,9 @@ using System.Linq;
 
 namespace Puzzle
 {
+    /// <summary>
+    /// Game field generator class.
+    /// </summary>
     public class GameFieldCreationService : IGameFieldCreationService
     {
         private const int DefaultEmptyCellIndex = 4;
@@ -35,6 +38,9 @@ namespace Puzzle
 
         public static GameField GameField { get; set; }
 
+        /// <summary>
+        /// Initialization with default values.
+        /// </summary>
         public void Init()
         {
             GameFieldSize = DefaultGameFieldSize;
@@ -42,6 +48,12 @@ namespace Puzzle
             Links = DefaultLinks;
         }
 
+        /// <summary>
+        /// Initialization with custom params. Needs for custom game field generating.
+        /// </summary>
+        /// <param name="gameFieldSize">Size of custom game field.</param>
+        /// <param name="emptyCellIndex">Index of empty cell.</param>
+        /// <param name="links">Cell's links.</param>
         public void Init(int gameFieldSize, int emptyCellIndex, List<KeyValuePair<int, int>> links)
         {
             if (gameFieldSize < 2)
@@ -64,6 +76,10 @@ namespace Puzzle
             Links = links;
         }
 
+        /// <summary>
+        /// Cunstruct game field.
+        /// </summary>
+        /// <returns>Constructed game field <see cref="GameField"/>.</returns>
         public GameField Construct()
         {
             var gameField = new GameField();
