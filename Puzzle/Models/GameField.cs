@@ -8,7 +8,7 @@ namespace Puzzle
     public class GameField
     {
         /// <summary>
-        /// Constructor of the <see cref="GameField"/>
+        /// Constructor of the <see cref="GameField"/>.
         /// </summary>
         public GameField()
         {
@@ -16,12 +16,12 @@ namespace Puzzle
         }
 
         /// <summary>
-        /// List of the game field cells <see cref="FieldCell"/>
+        /// List of the game field cells. <see cref="FieldCell"/>
         /// </summary>
         public List<FieldCell> Cells { get; set; }
 
         /// <summary>
-        /// Position of the empty cell on the game field
+        /// Position of the empty cell on the game field.
         /// </summary>
         public int EmptyCellIndex { get; set; }
     }
